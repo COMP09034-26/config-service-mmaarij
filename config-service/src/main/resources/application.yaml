@@ -1,0 +1,15 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/COMP09034-26/config-repo-mmaarij.git
+          default-label: main  # Git branch to use
+          timeout: 5
+          clone-on-start: true  # Clone repo on startup to fail fast if problems
+          force-pull: true  # Always pull latest changes
